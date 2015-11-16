@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		140953F41BEAC2C9004323D6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140953F31BEAC2C9004323D6 /* Model.swift */; };
+		1413D0911BD6D053005CBE38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0901BD6D053005CBE38 /* AppDelegate.swift */; };
+		1413D0951BD6D053005CBE38 /* MessagesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0941BD6D053005CBE38 /* MessagesTVC.swift */; };
+		1413D0981BD6D053005CBE38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1413D0961BD6D053005CBE38 /* Main.storyboard */; };
+		1413D09A1BD6D053005CBE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1413D0991BD6D053005CBE38 /* Assets.xcassets */; };
+		1413D09D1BD6D053005CBE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1413D09B1BD6D053005CBE38 /* LaunchScreen.storyboard */; };
+		1413D0A81BD6D053005CBE38 /* RedFiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0A71BD6D053005CBE38 /* RedFiveTests.swift */; };
+		1413D0B31BD6D053005CBE38 /* RedFiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0B21BD6D053005CBE38 /* RedFiveUITests.swift */; };
+		14358A5C1BE268F700732744 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14358A5B1BE268F700732744 /* SwiftyJSON.swift */; };
+		1491FF7A1BF55EF900709C5B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF791BF55EF900709C5B /* APIManager.swift */; };
+		1491FF7C1BF55F0900709C5B /* CFTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF7B1BF55F0900709C5B /* CFTexts.swift */; };
+		14CFE9E41BEEA473002FFC49 /* DashboardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1413D0A41BD6D053005CBE38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1413D0851BD6D053005CBE38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1413D08C1BD6D053005CBE38;
+			remoteInfo = RedFive;
+		};
+		1413D0AF1BD6D053005CBE38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1413D0851BD6D053005CBE38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1413D08C1BD6D053005CBE38;
+			remoteInfo = RedFive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		140953F31BEAC2C9004323D6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1413D08D1BD6D053005CBE38 /* RedFive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedFive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1413D0901BD6D053005CBE38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1413D0941BD6D053005CBE38 /* MessagesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTVC.swift; sourceTree = "<group>"; };
+		1413D0971BD6D053005CBE38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1413D0991BD6D053005CBE38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1413D09C1BD6D053005CBE38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1413D09E1BD6D053005CBE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1413D0A31BD6D053005CBE38 /* RedFiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedFiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1413D0A71BD6D053005CBE38 /* RedFiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedFiveTests.swift; sourceTree = "<group>"; };
+		1413D0A91BD6D053005CBE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1413D0AE1BD6D053005CBE38 /* RedFiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedFiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1413D0B21BD6D053005CBE38 /* RedFiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedFiveUITests.swift; sourceTree = "<group>"; };
+		1413D0B41BD6D053005CBE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14358A5B1BE268F700732744 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1491FF791BF55EF900709C5B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1491FF7B1BF55F0900709C5B /* CFTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFTexts.swift; sourceTree = "<group>"; };
+		14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1413D08A1BD6D053005CBE38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D0A01BD6D053005CBE38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D0AB1BD6D053005CBE38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1413D0841BD6D053005CBE38 = {
+			isa = PBXGroup;
+			children = (
+				1413D08F1BD6D053005CBE38 /* RedFive */,
+				1413D0A61BD6D053005CBE38 /* RedFiveTests */,
+				1413D0B11BD6D053005CBE38 /* RedFiveUITests */,
+				1413D08E1BD6D053005CBE38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1413D08E1BD6D053005CBE38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1413D08D1BD6D053005CBE38 /* RedFive.app */,
+				1413D0A31BD6D053005CBE38 /* RedFiveTests.xctest */,
+				1413D0AE1BD6D053005CBE38 /* RedFiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1413D08F1BD6D053005CBE38 /* RedFive */ = {
+			isa = PBXGroup;
+			children = (
+				1413D0901BD6D053005CBE38 /* AppDelegate.swift */,
+				14358A5B1BE268F700732744 /* SwiftyJSON.swift */,
+				1491FF791BF55EF900709C5B /* APIManager.swift */,
+				1491FF7B1BF55F0900709C5B /* CFTexts.swift */,
+				140953F31BEAC2C9004323D6 /* Model.swift */,
+				14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */,
+				1413D0941BD6D053005CBE38 /* MessagesTVC.swift */,
+				1413D0961BD6D053005CBE38 /* Main.storyboard */,
+				1413D0991BD6D053005CBE38 /* Assets.xcassets */,
+				1413D09B1BD6D053005CBE38 /* LaunchScreen.storyboard */,
+				1413D09E1BD6D053005CBE38 /* Info.plist */,
+			);
+			path = RedFive;
+			sourceTree = "<group>";
+		};
+		1413D0A61BD6D053005CBE38 /* RedFiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				1413D0A71BD6D053005CBE38 /* RedFiveTests.swift */,
+				1413D0A91BD6D053005CBE38 /* Info.plist */,
+			);
+			path = RedFiveTests;
+			sourceTree = "<group>";
+		};
+		1413D0B11BD6D053005CBE38 /* RedFiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1413D0B21BD6D053005CBE38 /* RedFiveUITests.swift */,
+				1413D0B41BD6D053005CBE38 /* Info.plist */,
+			);
+			path = RedFiveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1413D08C1BD6D053005CBE38 /* RedFive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1413D0B71BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFive" */;
+			buildPhases = (
+				1413D0891BD6D053005CBE38 /* Sources */,
+				1413D08A1BD6D053005CBE38 /* Frameworks */,
+				1413D08B1BD6D053005CBE38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedFive;
+			productName = RedFive;
+			productReference = 1413D08D1BD6D053005CBE38 /* RedFive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1413D0A21BD6D053005CBE38 /* RedFiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1413D0BA1BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFiveTests" */;
+			buildPhases = (
+				1413D09F1BD6D053005CBE38 /* Sources */,
+				1413D0A01BD6D053005CBE38 /* Frameworks */,
+				1413D0A11BD6D053005CBE38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1413D0A51BD6D053005CBE38 /* PBXTargetDependency */,
+			);
+			name = RedFiveTests;
+			productName = RedFiveTests;
+			productReference = 1413D0A31BD6D053005CBE38 /* RedFiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1413D0AD1BD6D053005CBE38 /* RedFiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1413D0BD1BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFiveUITests" */;
+			buildPhases = (
+				1413D0AA1BD6D053005CBE38 /* Sources */,
+				1413D0AB1BD6D053005CBE38 /* Frameworks */,
+				1413D0AC1BD6D053005CBE38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1413D0B01BD6D053005CBE38 /* PBXTargetDependency */,
+			);
+			name = RedFiveUITests;
+			productName = RedFiveUITests;
+			productReference = 1413D0AE1BD6D053005CBE38 /* RedFiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1413D0851BD6D053005CBE38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Sean Crabtree";
+				TargetAttributes = {
+					1413D08C1BD6D053005CBE38 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = Z75KY6T22H;
+					};
+					1413D0A21BD6D053005CBE38 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 1413D08C1BD6D053005CBE38;
+					};
+					1413D0AD1BD6D053005CBE38 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 1413D08C1BD6D053005CBE38;
+					};
+				};
+			};
+			buildConfigurationList = 1413D0881BD6D053005CBE38 /* Build configuration list for PBXProject "RedFive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1413D0841BD6D053005CBE38;
+			productRefGroup = 1413D08E1BD6D053005CBE38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1413D08C1BD6D053005CBE38 /* RedFive */,
+				1413D0A21BD6D053005CBE38 /* RedFiveTests */,
+				1413D0AD1BD6D053005CBE38 /* RedFiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1413D08B1BD6D053005CBE38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1413D09D1BD6D053005CBE38 /* LaunchScreen.storyboard in Resources */,
+				1413D09A1BD6D053005CBE38 /* Assets.xcassets in Resources */,
+				1413D0981BD6D053005CBE38 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D0A11BD6D053005CBE38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D0AC1BD6D053005CBE38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1413D0891BD6D053005CBE38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1491FF7C1BF55F0900709C5B /* CFTexts.swift in Sources */,
+				1413D0951BD6D053005CBE38 /* MessagesTVC.swift in Sources */,
+				1413D0911BD6D053005CBE38 /* AppDelegate.swift in Sources */,
+				140953F41BEAC2C9004323D6 /* Model.swift in Sources */,
+				14CFE9E41BEEA473002FFC49 /* DashboardTVC.swift in Sources */,
+				14358A5C1BE268F700732744 /* SwiftyJSON.swift in Sources */,
+				1491FF7A1BF55EF900709C5B /* APIManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D09F1BD6D053005CBE38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1413D0A81BD6D053005CBE38 /* RedFiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1413D0AA1BD6D053005CBE38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1413D0B31BD6D053005CBE38 /* RedFiveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1413D0A51BD6D053005CBE38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1413D08C1BD6D053005CBE38 /* RedFive */;
+			targetProxy = 1413D0A41BD6D053005CBE38 /* PBXContainerItemProxy */;
+		};
+		1413D0B01BD6D053005CBE38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1413D08C1BD6D053005CBE38 /* RedFive */;
+			targetProxy = 1413D0AF1BD6D053005CBE38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1413D0961BD6D053005CBE38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1413D0971BD6D053005CBE38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1413D09B1BD6D053005CBE38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1413D09C1BD6D053005CBE38 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1413D0B51BD6D053005CBE38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1413D0B61BD6D053005CBE38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1413D0B81BD6D053005CBE38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = RedFive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1413D0B91BD6D053005CBE38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = RedFive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1413D0BB1BD6D053005CBE38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedFiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedFive.app/RedFive";
+			};
+			name = Debug;
+		};
+		1413D0BC1BD6D053005CBE38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedFiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedFive.app/RedFive";
+			};
+			name = Release;
+		};
+		1413D0BE1BD6D053005CBE38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RedFiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RedFive;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1413D0BF1BD6D053005CBE38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RedFiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scrabtree.RedFiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RedFive;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1413D0881BD6D053005CBE38 /* Build configuration list for PBXProject "RedFive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1413D0B51BD6D053005CBE38 /* Debug */,
+				1413D0B61BD6D053005CBE38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1413D0B71BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1413D0B81BD6D053005CBE38 /* Debug */,
+				1413D0B91BD6D053005CBE38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1413D0BA1BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1413D0BB1BD6D053005CBE38 /* Debug */,
+				1413D0BC1BD6D053005CBE38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1413D0BD1BD6D053005CBE38 /* Build configuration list for PBXNativeTarget "RedFiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1413D0BE1BD6D053005CBE38 /* Debug */,
+				1413D0BF1BD6D053005CBE38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1413D0851BD6D053005CBE38 /* Project object */;
+}
