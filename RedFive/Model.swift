@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Active {   // ADD filter of data for only Running
+struct CFActive {   // ADD filter of data for only Running
 	
 	let name : String?
 	let calls : String?
@@ -22,7 +22,7 @@ struct Active {   // ADD filter of data for only Running
 	}
 }
 
-struct Inactive {   // ADD filter of data for only Done, Stopped, Scheduled
+struct CFInactive {   // ADD filter of data for only Done, Stopped, Scheduled
 	
 	let name : String?
 	let calls : String?
@@ -35,7 +35,7 @@ struct Inactive {   // ADD filter of data for only Done, Stopped, Scheduled
 	}
 }
 
-struct Numbers {
+struct CFNumber {
 	
 	let name : String?  // JOHN - Convert to (phone) num-bers format?
 	let calls : String?
@@ -52,7 +52,7 @@ struct Numbers {
 	}
 }
 
-struct Keywords {
+struct CFKeyword {
 	
 	let name : String?
 	let texts : String?
@@ -63,7 +63,7 @@ struct Keywords {
 	}
 }
 
-struct Voicemails {
+struct CFVoicemail {
 	
 	let name : String?
 	let number : String?
@@ -76,16 +76,16 @@ struct Voicemails {
 	}
 }
 
-struct Texts {
+struct CFText {
 	
-	let name : String?
-	let number : String?
-	let received : String?
-	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		number = json["number"].string
-		received = json["received"].string
-	}
+	let name : String? = ""
+	let number : String? = ""
+	let received : String? = ""
+//
+//	init(withJSON json : JSON) {
+//		name = json["name"].string
+//		number = json["number"].string
+//		received = json["received"].string
+//	}
 }
 

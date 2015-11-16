@@ -15,7 +15,7 @@ class ActiveCell: UITableViewCell {
 	@IBOutlet weak var activeCalls: UILabel!
 	@IBOutlet weak var activeProgress: UILabel!
 
-	var active : Active? {
+	var active : CFActive? {
 		didSet {
 			if active != nil {
 				activeName.text = active?.name
@@ -30,7 +30,7 @@ class InactiveCell: UITableViewCell {
 	@IBOutlet weak var inactiveCalls: UILabel!
 	@IBOutlet weak var inactiveProgress: UILabel!
 	
-	var inactive : Inactive? {
+	var inactive : CFInactive? {
 		didSet {
 			if inactive != nil {
 				inactiveName.text = inactive?.name
@@ -47,7 +47,7 @@ class NumbersCell: UITableViewCell {
 	@IBOutlet weak var numbersMissed: UILabel!
 	@IBOutlet weak var numbersTexts: UILabel!
 	
-	var numbers : Numbers? {
+	var numbers : CFNumber? {
 		didSet {
 			if numbers != nil {
 				numbersName.text = numbers?.name
@@ -63,7 +63,7 @@ class KeywordsCell: UITableViewCell {
 	@IBOutlet weak var keywordsName: UILabel!
 	@IBOutlet weak var keywordsTexts: UILabel!
 	
-	var keywords : Keywords? {
+	var keywords : CFKeyword? {
 		didSet {
 			if keywords != nil {
 				keywordsName.text = keywords?.name
@@ -77,12 +77,13 @@ class KeywordsCell: UITableViewCell {
 
 class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var active = [Active]()
-	var inactive = [Inactive]()
-	var numbers = [Numbers]()
-	var keywords = [Keywords]()
+	var active = [CFActive]()
+	var inactive = [CFInactive]()
+	var numbers = [CFNumber]()
+	var keywords = [CFKeyword]()
 	
 	var segmentCellIdentifier = "ActiveCell"
+//    var callfire: CallFire;
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -109,20 +110,23 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
 		
 		// STUB DATA
+//        let texts:[CFText] = callfire.getTexts();
+//        let text:CFText = callfire.getText(32);
+        
 		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
-		let activeData = Active(withJSON: activeJSON)
+		let activeData = CFActive(withJSON: activeJSON)
 		active.append(activeData)
 		
 		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
-		let inactiveData = Inactive(withJSON: inactiveJSON)
+		let inactiveData = CFInactive(withJSON: inactiveJSON)
 		inactive.append(inactiveData)
 		
 		let numbersJSON = JSON(["name":"(310) 555-1234","calls":"100","transfers":"60","missed":"40","texts":"50"])
-		let numbersData = Numbers(withJSON: numbersJSON)
+		let numbersData = CFNumber(withJSON: numbersJSON)
 		numbers.append(numbersData)
 		
 		let keywordsJSON = JSON(["name":"TEST","texts":"20"])
-		let keywordsData = Keywords(withJSON: keywordsJSON)
+		let keywordsData = CFKeyword(withJSON: keywordsJSON)
 		keywords.append(keywordsData)
 		
 		
@@ -143,7 +147,7 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 	func gotData(items:[JSON], type:String) {
 		if type == "leases" {
 			for item in items {
-				let num = Numbers(withJSON: item)
+				let num = CFNumber(withJSON: item)
 				print(num)
 			}
 		}

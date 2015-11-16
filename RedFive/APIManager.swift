@@ -15,7 +15,7 @@ import Foundation
 class APIManager : APIDelegate {
 	
 //	var delegate : APIManagerDelegate?
-	var api = CFTexts()
+	var api = CFApiTexts()
 	var handler : (([JSON]) -> ())?
 	
 	func getData(endPoint:String, handler:([JSON])->()) {
