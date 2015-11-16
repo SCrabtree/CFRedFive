@@ -17,4 +17,12 @@ class CallFire {
     func getText(id: Int64) -> CFText {
         return CFText()
     }
+
+    func getNumbers() -> [CFNumber] {
+        let numbersJSON = JSON(["name":"(310) 555-1234","calls":"100","transfers":"60","missed":"40","texts":"50"])
+        let numbersData = CFNumber(withJSON: numbersJSON)
+        var numbers:[CFNumber] = []
+        numbers.append(numbersData)
+        return numbers;
+    }
 }
