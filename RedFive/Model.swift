@@ -78,20 +78,14 @@ struct CFVoicemail {
 
 struct CFText {
 	
-	let name : String?
-	let number : String?
-	let received : String?
-	
-    init() {
-        name = "name"
-        number = "number"
-        received = "received"
-    }
-    
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		number = json["number"].string
-		received = json["received"].string
-	}
+	let name : String? = ""
+	let number : String? = ""
+	let received : String? = ""
+//
+//	init(withJSON json : JSON) {
+//		name = json["name"].string
+//		number = json["number"].string
+//		received = json["received"].string
+//	}
 }
 

@@ -83,6 +83,7 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 	var keywords = [CFKeyword]()
 	
 	var segmentCellIdentifier = "ActiveCell"
+//    var callfire: CallFire;
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -109,6 +110,9 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
 		
 		// STUB DATA
+//        let texts:[CFText] = callfire.getTexts();
+//        let text:CFText = callfire.getText(32);
+        
 		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
 		let activeData = CFActive(withJSON: activeJSON)
 		active.append(activeData)

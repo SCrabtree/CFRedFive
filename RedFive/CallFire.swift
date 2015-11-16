@@ -13,4 +13,8 @@ class CallFire {
     func getTexts() -> [CFText] {
         return []
     }
+    
+    func getText(id: Int64) -> CFText {
+        return CFText()
+    }
 }
