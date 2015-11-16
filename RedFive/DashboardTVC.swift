@@ -113,23 +113,25 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        let texts:[CFText] = callfire.getTexts();
 //        let text:CFText = callfire.getText(32);
         
-		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
-		let activeData = CFActive(withJSON: activeJSON)
-		active.append(activeData)
+//		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
+//		let activeData = CFActive(withJSON: activeJSON)
+//		active.append(activeData)
+		active += callfire.getActive()
 		
-		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
-		let inactiveData = CFInactive(withJSON: inactiveJSON)
-		inactive.append(inactiveData)
+//		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
+//		let inactiveData = CFInactive(withJSON: inactiveJSON)
+//		inactive.append(inactiveData)
+		inactive += callfire.getInactive()
 		
 //		let numbersJSON = JSON(["name":"(310) 555-1234","calls":"100","transfers":"60","missed":"40","texts":"50"])
 //		let numbersData = CFNumber(withJSON: numbersJSON)
 //		numbers.append(numbersData)
-        numbers += callfire.getNumbers();
+		numbers += callfire.getNumbers();
 		
-		let keywordsJSON = JSON(["name":"TEST","texts":"20"])
-		let keywordsData = CFKeyword(withJSON: keywordsJSON)
-		keywords.append(keywordsData)
-		
+//		let keywordsJSON = JSON(["name":"TEST","texts":"20"])
+//		let keywordsData = CFKeyword(withJSON: keywordsJSON)
+//		keywords.append(keywordsData)
+		keywords += callfire.getKeywords()
 		
 		let manager = APIManager()
 		manager.getData("/numbers/leases", handler: {items in

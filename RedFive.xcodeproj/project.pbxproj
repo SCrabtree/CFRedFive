@@ -109,10 +109,10 @@
 		1413D08F1BD6D053005CBE38 /* RedFive */ = {
 			isa = PBXGroup;
 			children = (
-				5208132F1BFA4F2F002389EE /* CallFire.swift */,
-				140953F31BEAC2C9004323D6 /* Model.swift */,
 				1413D0901BD6D053005CBE38 /* AppDelegate.swift */,
 				14358A5B1BE268F700732744 /* SwiftyJSON.swift */,
+				5208132F1BFA4F2F002389EE /* CallFire.swift */,
+				140953F31BEAC2C9004323D6 /* Model.swift */,
 				1491FF791BF55EF900709C5B /* APIManager.swift */,
 				1491FF7B1BF55F0900709C5B /* CFTexts.swift */,
 				14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */,

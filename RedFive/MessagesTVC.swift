@@ -14,7 +14,7 @@ class VoicemailCell: UITableViewCell {
 	@IBOutlet weak var voicemailNumber: UILabel!
 	@IBOutlet weak var voicemailReceived: UILabel!
 	
-	var voicemails : Voicemails? {
+	var voicemails : CFVoicemail? {
 		didSet {
 			if voicemails != nil {
 				voicemailName.text = voicemails?.name
@@ -31,7 +31,7 @@ class TextCell: UITableViewCell {
 	@IBOutlet weak var textNumber: UILabel!
 	@IBOutlet weak var textReceived: UILabel!
 	
-	var texts : CFApiTexts? {
+	var texts : CFText? {
 		didSet {
 			if texts != nil {
 				textName.text = texts?.name
@@ -56,10 +56,12 @@ class TextCell: UITableViewCell {
 
 class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var voicemails = [Voicemails]()
-	var texts = [CFApiTexts]()
+	var voicemails = [CFVoicemail]()
+	var texts = [CFText]()
+	
 	
 	var segmentCellIdentifier = "VoicemailCell"
+	var callfire = CallFire();
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -82,13 +84,15 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 		super.viewDidLoad()
 		
 		// STUB DATA
-		let voicemailJSON = JSON(["name":"(212) 555-1234","number":"(310) 555-1234","received":"10/30/15  10:12 PM"])
-		let voicemailData = Voicemails(withJSON: voicemailJSON)
-		voicemails.append(voicemailData)
+//		let voicemailJSON = JSON(["name":"(212) 555-1234","number":"(310) 555-1234","received":"10/30/15  10:12 PM"])
+//		let voicemailData = Voicemails(withJSON: voicemailJSON)
+//		voicemails.append(voicemailData)
+		voicemails += callfire.getVoicemails()
 		
-		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
-		let textData = CFApiTexts(withJSON: textJSON)
-		texts.append(textData)
+//		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
+//		let textData = CFApiTexts(withJSON: textJSON)
+//		texts.append(textData)
+		texts += callfire.getTexts()
 		
 		tableView.reloadData()
 	}
