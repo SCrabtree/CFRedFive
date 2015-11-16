@@ -31,7 +31,7 @@ class TextCell: UITableViewCell {
 	@IBOutlet weak var textNumber: UILabel!
 	@IBOutlet weak var textReceived: UILabel!
 	
-	var texts : Texts? {
+	var texts : CFApiTexts? {
 		didSet {
 			if texts != nil {
 				textName.text = texts?.name
@@ -57,7 +57,7 @@ class TextCell: UITableViewCell {
 class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var voicemails = [Voicemails]()
-	var texts = [Texts]()
+	var texts = [CFApiTexts]()
 	
 	var segmentCellIdentifier = "VoicemailCell"
 	
@@ -87,7 +87,7 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 		voicemails.append(voicemailData)
 		
 		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
-		let textData = Texts(withJSON: textJSON)
+		let textData = CFApiTexts(withJSON: textJSON)
 		texts.append(textData)
 		
 		tableView.reloadData()

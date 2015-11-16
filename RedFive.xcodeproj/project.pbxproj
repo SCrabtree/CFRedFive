@@ -19,6 +19,7 @@
 		1491FF7A1BF55EF900709C5B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF791BF55EF900709C5B /* APIManager.swift */; };
 		1491FF7C1BF55F0900709C5B /* CFTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF7B1BF55F0900709C5B /* CFTexts.swift */; };
 		14CFE9E41BEEA473002FFC49 /* DashboardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */; };
+		520813301BFA4F2F002389EE /* CallFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208132F1BFA4F2F002389EE /* CallFire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1491FF791BF55EF900709C5B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1491FF7B1BF55F0900709C5B /* CFTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFTexts.swift; sourceTree = "<group>"; };
 		14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTVC.swift; sourceTree = "<group>"; };
+		5208132F1BFA4F2F002389EE /* CallFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallFire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +109,12 @@
 		1413D08F1BD6D053005CBE38 /* RedFive */ = {
 			isa = PBXGroup;
 			children = (
+				5208132F1BFA4F2F002389EE /* CallFire.swift */,
+				140953F31BEAC2C9004323D6 /* Model.swift */,
 				1413D0901BD6D053005CBE38 /* AppDelegate.swift */,
 				14358A5B1BE268F700732744 /* SwiftyJSON.swift */,
 				1491FF791BF55EF900709C5B /* APIManager.swift */,
 				1491FF7B1BF55F0900709C5B /* CFTexts.swift */,
-				140953F31BEAC2C9004323D6 /* Model.swift */,
 				14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */,
 				1413D0941BD6D053005CBE38 /* MessagesTVC.swift */,
 				1413D0961BD6D053005CBE38 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 				1491FF7C1BF55F0900709C5B /* CFTexts.swift in Sources */,
 				1413D0951BD6D053005CBE38 /* MessagesTVC.swift in Sources */,
 				1413D0911BD6D053005CBE38 /* AppDelegate.swift in Sources */,
+				520813301BFA4F2F002389EE /* CallFire.swift in Sources */,
 				140953F41BEAC2C9004323D6 /* Model.swift in Sources */,
 				14CFE9E41BEEA473002FFC49 /* DashboardTVC.swift in Sources */,
 				14358A5C1BE268F700732744 /* SwiftyJSON.swift in Sources */,

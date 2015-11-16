@@ -13,7 +13,7 @@ protocol APIDelegate {
 	func gotData(items : [JSON])
 }
 
-class CFTexts {
+class CFApiTexts {
 	
 	var delegate : APIDelegate?
 	
