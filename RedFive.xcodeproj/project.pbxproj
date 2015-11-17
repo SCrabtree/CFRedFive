@@ -16,8 +16,6 @@
 		1413D0A81BD6D053005CBE38 /* RedFiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0A71BD6D053005CBE38 /* RedFiveTests.swift */; };
 		1413D0B31BD6D053005CBE38 /* RedFiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1413D0B21BD6D053005CBE38 /* RedFiveUITests.swift */; };
 		14358A5C1BE268F700732744 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14358A5B1BE268F700732744 /* SwiftyJSON.swift */; };
-		1476B6AE1BFAB25A00538D06 /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1476B6AB1BFAB25A00538D06 /* Pods.debug.xcconfig */; };
-		1476B6AF1BFAB25A00538D06 /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1476B6AC1BFAB25A00538D06 /* Pods.release.xcconfig */; };
 		1491FF7A1BF55EF900709C5B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF791BF55EF900709C5B /* APIManager.swift */; };
 		1491FF7C1BF55F0900709C5B /* CFTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FF7B1BF55F0900709C5B /* CFTexts.swift */; };
 		14CFE9E41BEEA473002FFC49 /* DashboardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */; };
@@ -57,8 +55,6 @@
 		1413D0B21BD6D053005CBE38 /* RedFiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedFiveUITests.swift; sourceTree = "<group>"; };
 		1413D0B41BD6D053005CBE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14358A5B1BE268F700732744 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		1476B6AB1BFAB25A00538D06 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		1476B6AC1BFAB25A00538D06 /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1491FF791BF55EF900709C5B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1491FF7B1BF55F0900709C5B /* CFTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFTexts.swift; sourceTree = "<group>"; };
 		14CFE9E31BEEA473002FFC49 /* DashboardTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTVC.swift; sourceTree = "<group>"; };
@@ -97,7 +93,6 @@
 				1413D0A61BD6D053005CBE38 /* RedFiveTests */,
 				1413D0B11BD6D053005CBE38 /* RedFiveUITests */,
 				1413D08E1BD6D053005CBE38 /* Products */,
-				1476B6AD1BFAB25A00538D06 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,16 +141,6 @@
 				1413D0B41BD6D053005CBE38 /* Info.plist */,
 			);
 			path = RedFiveUITests;
-			sourceTree = "<group>";
-		};
-		1476B6AD1BFAB25A00538D06 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1476B6AB1BFAB25A00538D06 /* Pods.debug.xcconfig */,
-				1476B6AC1BFAB25A00538D06 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "../GA Swift/Lesson20/Realm/RealmTest";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +249,6 @@
 			files = (
 				1413D09D1BD6D053005CBE38 /* LaunchScreen.storyboard in Resources */,
 				1413D09A1BD6D053005CBE38 /* Assets.xcassets in Resources */,
-				1476B6AE1BFAB25A00538D06 /* Pods.debug.xcconfig in Resources */,
-				1476B6AF1BFAB25A00538D06 /* Pods.release.xcconfig in Resources */,
 				1413D0981BD6D053005CBE38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
