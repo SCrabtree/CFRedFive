@@ -10,14 +10,6 @@ import Foundation
 
 class CallFire {
     
-//    func getTexts() -> [CFText] {
-//
-//		return []
-//    }
-//    func getText(id: Int64) -> CFText {
-//        return CFText()
-//    }
-	
 	func getTexts() -> [CFText] {
 		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
 		let textData = CFText(withJSON: textJSON)

@@ -68,11 +68,15 @@ struct CFVoicemail {
 	let name : String?
 	let number : String?
 	let received : String?
+	let message: String?
+	let length: String?
 	
 	init(withJSON json : JSON) {
 		name = json["name"].string
 		number = json["number"].string
 		received = json["received"].string
+		message = json["message"].string
+		length = json["length"].string
 	}
 }
 
@@ -81,11 +85,13 @@ struct CFText {
 	let name : String?
 	let number : String?
 	let received : String?
+	let message: String?
 
 	init(withJSON json : JSON) {
 		name = json["name"].string
 		number = json["number"].string
 		received = json["received"].string
+		message = json["message"].string
 	}
 }
 
