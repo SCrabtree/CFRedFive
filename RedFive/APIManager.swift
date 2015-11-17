@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 //protocol APIManagerDelegate {
 //	func gotData(items:[JSON])
