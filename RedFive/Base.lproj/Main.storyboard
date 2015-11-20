@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YU6-UG-yUR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.1764705882" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActiveCell" id="h4w-kA-nqw" customClass="ActiveCell" customModule="RedFive" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -37,7 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-GB-Bid">
-                                                    <rect key="frame" x="534" y="13" width="57.5" height="17"/>
+                                                    <rect key="frame" x="534" y="13" width="58" height="17"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="57.5" id="uYn-TO-RLa"/>
@@ -59,13 +61,14 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="aQp-MP-0zh" firstAttribute="leading" secondItem="Qt5-6n-DJM" secondAttribute="leadingMargin" id="7qa-ZJ-0e2"/>
+                                                <constraint firstItem="aQp-MP-0zh" firstAttribute="leading" secondItem="Qt5-6n-DJM" secondAttribute="leadingMargin" id="IYd-dp-5Kz"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Zgh-GB-Bid" secondAttribute="trailing" id="MGz-dU-2KP"/>
                                                 <constraint firstItem="Zgh-GB-Bid" firstAttribute="centerY" secondItem="Qt5-6n-DJM" secondAttribute="centerY" id="O2b-dV-Bh7"/>
+                                                <constraint firstItem="aQp-MP-0zh" firstAttribute="centerY" secondItem="Qt5-6n-DJM" secondAttribute="centerY" id="Qgs-V2-hqD"/>
+                                                <constraint firstItem="sky-vl-cGY" firstAttribute="leading" secondItem="aQp-MP-0zh" secondAttribute="trailing" constant="8" id="T3T-Xr-oBu"/>
+                                                <constraint firstItem="aQp-MP-0zh" firstAttribute="top" secondItem="Qt5-6n-DJM" secondAttribute="topMargin" constant="5" id="XN0-K3-hVO"/>
                                                 <constraint firstItem="Zgh-GB-Bid" firstAttribute="leading" secondItem="sky-vl-cGY" secondAttribute="trailing" constant="8" id="cV5-Rn-gCJ"/>
                                                 <constraint firstItem="sky-vl-cGY" firstAttribute="centerY" secondItem="Qt5-6n-DJM" secondAttribute="centerY" id="dQ4-e1-05K"/>
-                                                <constraint firstItem="aQp-MP-0zh" firstAttribute="centerY" secondItem="Qt5-6n-DJM" secondAttribute="centerY" id="qln-Po-awa"/>
-                                                <constraint firstItem="sky-vl-cGY" firstAttribute="leading" secondItem="aQp-MP-0zh" secondAttribute="trailing" constant="8" id="zhf-LT-fMz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -286,17 +289,20 @@
                             <rect key="frame" x="20" y="7.5" width="525" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
+                            <color key="backgroundColor" red="0.0" green="0.1764705882352941" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                             <segments>
                                 <segment title="Active"/>
                                 <segment title="Inactive"/>
                                 <segment title="Numbers"/>
                                 <segment title="Keywords"/>
                             </segments>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="segmentedControlChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="Gbh-Gx-gEx"/>
                             </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="VMJ-Gx-2GM">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="reloadHit:" destination="9pv-A4-QxB" id="5W0-eo-G14"/>
                             </connections>
@@ -483,15 +489,18 @@
                             <rect key="frame" x="20" y="7" width="525" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
+                            <color key="backgroundColor" red="0.0" green="0.1764705882352941" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                             <segments>
                                 <segment title="Voicemails"/>
                                 <segment title="Texts"/>
                             </segments>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="segmentedControlChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="QDf-Jp-AuL"/>
                             </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="vj1-0Z-4JI">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="reloadHit:" destination="8rJ-Kc-sve" id="HJt-qb-e3Z"/>
                             </connections>
@@ -533,17 +542,8 @@
                                 <color key="textColor" red="0.46666666666666667" green="0.71764705882352942" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUj-kh-0Mg">
-                                <rect key="frame" x="243" y="97.5" width="114" height="45"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="F9z-28-hFb"/>
-                                    <constraint firstAttribute="height" constant="45" id="GVb-vl-5Yq"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="CallFire Logo"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-xI-aA1">
-                                <rect key="frame" x="416" y="408.5" width="124" height="27"/>
+                                <rect key="frame" x="416" y="408" width="124" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Sign in with Facebook">
@@ -551,14 +551,14 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-3h-MxH">
-                                <rect key="frame" x="60" y="167.5" width="113.5" height="17"/>
+                                <rect key="frame" x="60" y="167" width="113.5" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.46666666666666667" green="0.71764705882352942" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    carl.friar@callfire.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-T6-T1K">
-                                <rect key="frame" x="60" y="192.5" width="480" height="40"/>
+                                <rect key="frame" x="60" y="192" width="480" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -582,7 +582,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Your secure password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-Yi-zr5">
-                                <rect key="frame" x="60" y="280.5" width="480" height="40"/>
+                                <rect key="frame" x="60" y="280" width="480" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -593,7 +593,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkz-xk-fxO">
-                                <rect key="frame" x="60" y="360.5" width="480" height="40"/>
+                                <rect key="frame" x="60" y="360" width="480" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.63529411759999999" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -615,21 +615,39 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obc-dn-Czi">
-                                <rect key="frame" x="84" y="408.5" width="110" height="27"/>
+                                <rect key="frame" x="84" y="408" width="110" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Sign in with Google">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUj-kh-0Mg">
+                                <rect key="frame" x="200" y="71" width="201.5" height="71"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aUj-kh-0Mg" secondAttribute="height" multiplier="403:142" id="2Zz-zX-2V4"/>
+                                    <constraint firstAttribute="width" constant="114" id="F9z-28-hFb"/>
+                                    <constraint firstAttribute="height" constant="45" id="GVb-vl-5Yq"/>
+                                    <constraint firstAttribute="height" constant="71" id="N9b-vu-eav"/>
+                                    <constraint firstAttribute="width" constant="201" id="nbn-fd-74N"/>
+                                </constraints>
+                                <state key="normal" image="CallFire Logo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F9z-28-hFb"/>
+                                        <exclude reference="GVb-vl-5Yq"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.1764705882352941" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="fcR-T6-T1K" secondAttribute="trailing" constant="40" id="2C6-X7-Pyu"/>
-                            <constraint firstItem="fcR-T6-T1K" firstAttribute="top" secondItem="aUj-kh-0Mg" secondAttribute="bottom" constant="50" id="4mb-hc-Hzr"/>
                             <constraint firstItem="Bj4-Yi-zr5" firstAttribute="centerY" secondItem="NNV-DF-9F4" secondAttribute="centerY" id="914-ls-bmC"/>
                             <constraint firstItem="VPb-hU-PAN" firstAttribute="top" secondItem="cUK-Cv-LC6" secondAttribute="bottom" constant="20" id="ATm-lE-Ppl"/>
+                            <constraint firstItem="fcR-T6-T1K" firstAttribute="top" secondItem="aUj-kh-0Mg" secondAttribute="bottom" constant="50" id="AWl-rG-MEd"/>
                             <constraint firstItem="ag5-3h-MxH" firstAttribute="leading" secondItem="NNV-DF-9F4" secondAttribute="leadingMargin" constant="40" id="Avj-Ko-XHW"/>
                             <constraint firstItem="Obc-dn-Czi" firstAttribute="top" secondItem="Nkz-xk-fxO" secondAttribute="bottom" constant="40" id="D9y-K1-PoK"/>
                             <constraint firstItem="Bj4-Yi-zr5" firstAttribute="top" secondItem="Ugp-b5-r6r" secondAttribute="bottom" constant="7.5" id="Gdf-p7-bxH"/>
@@ -639,6 +657,7 @@
                             <constraint firstItem="fcR-T6-T1K" firstAttribute="leading" secondItem="NNV-DF-9F4" secondAttribute="leadingMargin" constant="40" id="KUm-Eq-cAa"/>
                             <constraint firstItem="Nkz-xk-fxO" firstAttribute="leading" secondItem="NNV-DF-9F4" secondAttribute="leadingMargin" constant="40" id="KqI-hS-mWT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P2j-xI-aA1" secondAttribute="trailing" constant="40" id="Oqf-po-DJF"/>
+                            <constraint firstItem="aUj-kh-0Mg" firstAttribute="centerX" secondItem="NNV-DF-9F4" secondAttribute="centerX" id="RTW-B1-3SI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="laE-FZ-Ra4" secondAttribute="trailing" constant="40" id="RhR-aK-VsX"/>
                             <constraint firstItem="cUK-Cv-LC6" firstAttribute="centerX" secondItem="NNV-DF-9F4" secondAttribute="centerX" id="UR4-ev-CGf"/>
                             <constraint firstItem="Obc-dn-Czi" firstAttribute="top" secondItem="Nkz-xk-fxO" secondAttribute="bottom" constant="8" id="VdC-oP-cSu"/>
@@ -649,7 +668,6 @@
                             <constraint firstItem="XMi-Gz-1KJ" firstAttribute="top" secondItem="Obc-dn-Czi" secondAttribute="bottom" constant="57" id="gm1-2u-Eyv"/>
                             <constraint firstItem="Bj4-Yi-zr5" firstAttribute="leading" secondItem="NNV-DF-9F4" secondAttribute="leadingMargin" constant="40" id="jvp-Gw-oVN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bj4-Yi-zr5" secondAttribute="trailing" constant="40" id="oVB-dU-2Mh"/>
-                            <constraint firstItem="aUj-kh-0Mg" firstAttribute="centerX" secondItem="NNV-DF-9F4" secondAttribute="centerX" id="sZe-5H-E9z"/>
                             <constraint firstItem="XMi-Gz-1KJ" firstAttribute="centerX" secondItem="NNV-DF-9F4" secondAttribute="centerX" id="t0i-82-brf"/>
                             <constraint firstItem="Nkz-xk-fxO" firstAttribute="top" secondItem="Bj4-Yi-zr5" secondAttribute="bottom" constant="40" id="tm0-9E-0J2"/>
                             <constraint firstItem="Ugp-b5-r6r" firstAttribute="leading" secondItem="NNV-DF-9F4" secondAttribute="leadingMargin" constant="40" id="twg-nS-fP6"/>

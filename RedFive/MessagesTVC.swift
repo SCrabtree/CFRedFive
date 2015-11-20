@@ -84,6 +84,9 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 		super.viewDidLoad()
         callfire.getTexts(handleCFTexts)
         callfire.getVoicemails(handleCFVoicemails)
+		
+		UINavigationBar.appearance().translucent = false
+		UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 0, green: 45, blue: 69, alpha: 1)
 	}
 	
 	override func didReceiveMemoryWarning() {
