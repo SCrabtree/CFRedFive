@@ -36,62 +36,30 @@ struct CFInactive {   // ADD filter of data for only Done, Stopped, Scheduled
 }
 
 struct CFNumber {
-	
-	let name : String?  // JOHN - Convert to (phone) num-bers format?
-	let calls : String?
-	let transfers : String?
-	let missed : String?
-	let texts : String?
-	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		calls = json["calls"].string
-		transfers = json["transfers"].string
-		missed = json["missed"].string
-		texts = json["texts"].string
-	}
+	var name : String?  // TODO - Convert to (phone) num-bers format?
+	var calls : String?
+	var transfers : String?
+	var missed : String?
+	var texts : String?
 }
 
 struct CFKeyword {
-	
-	let name : String?
-	let texts : String?
-	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		texts = json["texts"].string
-	}
+	var name : String?
+	var texts : String?
 }
 
 struct CFVoicemail {
-	
-	let name : String?
-	let number : String?
-	let received : String?
-	let message: String?
-	let length: String?
-	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		number = json["number"].string
-		received = json["received"].string
-		message = json["message"].string
-		length = json["length"].string
-	}
+	var name : String?
+	var number : String?
+	var received : String?
+	var message: String?
+	var length: String?
 }
 
 struct CFText {
-	
-	let name : String?
-	let number : String?
-	let received : String?
-	let message: String?
-
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		number = json["number"].string
-		received = json["received"].string
-		message = json["message"].string
-	}
+	var name : String?
+	var number : String?
+	var received : String?
+	var message: String?
 }
 

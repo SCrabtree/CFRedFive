@@ -77,8 +77,8 @@ class KeywordsCell: UITableViewCell {
 
 class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var active = [CFActive]()
-	var inactive = [CFInactive]()
+	var actives = [CFActive]()
+	var inactives = [CFInactive]()
 	var numbers = [CFNumber]()
 	var keywords = [CFKeyword]()
 	
@@ -108,37 +108,18 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		// STUB DATA
-//        let texts:[CFText] = callfire.getTexts();
-//        let text:CFText = callfire.getText(32);
         
-//		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
-//		let activeData = CFActive(withJSON: activeJSON)
-//		active.append(activeData)
-		active += callfire.getActive()
+        callfire.getActive(handleCFActives)
+        callfire.getInactive(handleCFInactives)
+        callfire.getNumbers(handleCFNumbers)
+        callfire.getKeywords(handleCFKeywords)
 		
-//		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
-//		let inactiveData = CFInactive(withJSON: inactiveJSON)
-//		inactive.append(inactiveData)
-		inactive += callfire.getInactive()
-		
-//		let numbersJSON = JSON(["name":"(310) 555-1234","calls":"100","transfers":"60","missed":"40","texts":"50"])
-//		let numbersData = CFNumber(withJSON: numbersJSON)
-//		numbers.append(numbersData)
-		numbers += callfire.getNumbers();
-		
-//		let keywordsJSON = JSON(["name":"TEST","texts":"20"])
-//		let keywordsData = CFKeyword(withJSON: keywordsJSON)
-//		keywords.append(keywordsData)
-		keywords += callfire.getKeywords()
-		
-		let manager = APIManager()
-		manager.getData("/numbers/leases", handler: {items in
-			self.gotData(items,type:"leases")
-		})
-
-		tableView.reloadData()
+//		let manager = APIManager()
+//		manager.getData("/numbers/leases", handler: {items in
+//			self.gotData(items,type:"leases")
+//		})
+//
+//		tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -146,14 +127,37 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
 	
-	
+    func handleCFActives(cfActives: [CFActive]) {
+        print("# MessageTVC.handleCFActives")
+        actives += cfActives
+        tableView.reloadData()
+    }
+    
+    func handleCFInactives(cfInactives: [CFInactive]) {
+        print("# MessageTVC.handleCFInactives")
+        inactives += cfInactives
+        tableView.reloadData()
+    }
+    
+    func handleCFNumbers(cfNumbers: [CFNumber]) {
+        print("# MessageTVC.handleCFNumbers")
+        numbers += cfNumbers
+        tableView.reloadData()
+    }
+    
+    func handleCFKeywords(cfKeywords: [CFKeyword]) {
+        print("# MessageTVC.handleCFKeywords")
+        keywords += cfKeywords
+        tableView.reloadData()
+    }
+    
 	func gotData(items:[JSON], type:String) {
-		if type == "leases" {
-			for item in items {
-				let num = CFNumber(withJSON: item)
-				print(num)
-			}
-		}
+//		if type == "leases" {
+//			for item in items {
+//				let num = CFNumber(withJSON: item)
+//				print(num)
+//			}
+//		}
 		/*
 		for item in items as [JSON] {
 			let contact = item["contact"]
@@ -175,9 +179,9 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
 		if segmentedControl.selectedSegmentIndex == 0 {
-			return active.count + 1
+			return actives.count + 1
 		} else if segmentedControl.selectedSegmentIndex == 1 {
-			return inactive.count + 1
+			return inactives.count + 1
 		} else if segmentedControl.selectedSegmentIndex == 2 {
 			return numbers.count + 1
 		}
@@ -193,9 +197,9 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 		}
 
 		if segmentedControl.selectedSegmentIndex == 0 {
-			(cell as! ActiveCell).active = active[indexPath.row - 1]
+			(cell as! ActiveCell).active = actives[indexPath.row - 1]
 		} else if segmentedControl.selectedSegmentIndex == 1 {
-			(cell as! InactiveCell).inactive = inactive[indexPath.row - 1]
+			(cell as! InactiveCell).inactive = inactives[indexPath.row - 1]
 		} else if segmentedControl.selectedSegmentIndex == 2 {
 			(cell as! NumbersCell).numbers = numbers[indexPath.row - 1]
 		} else {

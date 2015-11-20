@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class VoicemailCell: UITableViewCell {
 	
@@ -59,7 +60,6 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 	var voicemails = [CFVoicemail]()
 	var texts = [CFText]()
 	
-	
 	var segmentCellIdentifier = "VoicemailCell"
 	var callfire = CallFire();
 	
@@ -82,19 +82,8 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		// STUB DATA
-//		let voicemailJSON = JSON(["name":"(212) 555-1234","number":"(310) 555-1234","received":"10/30/15  10:12 PM"])
-//		let voicemailData = Voicemails(withJSON: voicemailJSON)
-//		voicemails.append(voicemailData)
-		voicemails += callfire.getVoicemails()
-		
-//		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
-//		let textData = CFApiTexts(withJSON: textJSON)
-//		texts.append(textData)
-		texts += callfire.getTexts()
-		
-		tableView.reloadData()
+        callfire.getTexts(handleCFTexts)
+        callfire.getVoicemails(handleCFVoicemails)
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -139,5 +128,58 @@ class MessagesTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 	//        // Get the new view controller using segue.destinationViewController.
 	//        // Pass the selected object to the new view controller.
 	//    }
+    
+    func handleCFTexts(cfTexts: [CFText]) {
+        print("# MessageTVC.handleCFTexts")
+        texts += cfTexts
+        
+        tableView.reloadData()
+    }
+    
+    func handleCFVoicemails(cfVoicemails: [CFVoicemail]) {
+        print("# MessageTVC.handleCFVoicemails")
+        voicemails += cfVoicemails
+        
+        tableView.reloadData()
+    }
+    
+//    func updateTextsAndCalls() {
+//        
+//        // STUB DATA
+//        //		let voicemailJSON = JSON(["name":"(212) 555-1234","number":"(310) 555-1234","received":"10/30/15  10:12 PM"])
+//        //		let voicemailData = Voicemails(withJSON: voicemailJSON)
+//        //		voicemails.append(voicemailData)
+//        voicemails += callfire.getVoicemails()
+//        
+//        //		let textJSON = JSON(["name":"(123) 456-7890","number":"(818) 555-1234","received":"7/06/13  4:32 PM"])
+//        //		let textData = CFApiTexts(withJSON: textJSON)
+//        //		texts.append(textData)
+//        texts += callfire.getTexts()
+//        
+//        tableView.reloadData()
+//        //        print("### CallFire alamoTest3")
+//        //        let user = "42054e0ab7f2"
+//        //        let password = "ce82c68b20685a90"
+//        //        let credential = NSURLCredential(user: user, password: password, persistence: .ForSession)
+//        //
+//        //        let request = Alamofire.request(.GET, "https://www.callfire.com/v2/texts", parameters: ["limit": "2"])
+//        //        .authenticate(usingCredential: credential)
+//        //        .validate()
+//        //        .responseJSON { response in
+//        //            //			print("### request")
+//        //            //			print(response.request)  // original URL request
+//        //            //			print("### response")
+//        //            //			print(response.response) // URL response
+//        //            //			print("### data")
+//        //            //			print(response.data)     // server data
+//        //            //			print("### result")
+//        //            //			print(response.result)   // result of response serialization
+//        //
+//        //            if let json = response.result.value as? Dictionary<String {
+//        //                print("json: \(json)")
+//        //                //print("items: \(json[]))
+//        //            }
+//
+//    }
 }
 
