@@ -115,7 +115,7 @@ class DashboardTVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         callfire.getKeywords(handleCFKeywords)
 
 		UINavigationBar.appearance().translucent = false
-		UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 0, green: 45, blue: 69, alpha: 1)
+		UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 0.45, blue: 0.89, alpha: 1)
 		
 //		let manager = APIManager()
 //		manager.getData("/numbers/leases", handler: {items in

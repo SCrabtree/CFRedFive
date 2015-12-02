@@ -14,10 +14,10 @@ class CallFire {
     let rootUrlV2 = "https://www.callfire.com/v2"
     let textLimit = 10
     let voiceLimit = 10
-    let numberLimit = 10;
-    let keywordLimit = 10;
+    let numberLimit = 10
+    let keywordLimit = 10
     
-    // TODO Remove, this is just default credential
+    // TODO Remove these default credentials
     var credential = NSURLCredential(user: "42054e0ab7f2", password: "ce82c68b20685a90", persistence: .ForSession)
     
     func setCredential(user: String, password: String) {
@@ -27,6 +27,7 @@ class CallFire {
     func setCredential(credential: NSURLCredential) {
         self.credential = credential
     }
+	
     func getTexts(callback: ((cfTexts: [CFText]) -> Void)?) {
         Alamofire.request(.GET, rootUrlV2 + "/texts", parameters: ["limit": textLimit])
                 .authenticate(usingCredential: credential)
@@ -40,7 +41,7 @@ class CallFire {
                                 let json = JSON(item)
                                 var text = CFText()
                                 let inbound = json["inbound"].boolValue
-                                // TODO name probable should be contact name
+                                // TODO name probably should be contact name
                                 text.name = self.formatNumber(inbound ? json["fromNumber"].string : json["toNumber"].string)
                                 text.number = self.formatNumber(inbound ? json["toNumber"].string : json["fromNumber"].string)
                                 // TODO convert 'created' long unixtime to formatted date
@@ -121,6 +122,15 @@ class CallFire {
 		
         callback?(cfActives: actives)
 	}
+	
+//	func getActive(callback: ((cfActives: [CFActive]) -> Void)?) {
+//		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
+//		let activeData = CFActive(withJSON: activeJSON)
+//		var actives: [CFActive] = []
+//		actives.append(activeData)
+//		
+//		callback?(cfActives: actives)
+//	}
 	
 	func getInactive(callback: ((cfInactives: [CFInactive]) -> Void)?) {
 		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])

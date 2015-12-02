@@ -16,19 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="RedFive Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-dU-Rk4">
-                                <rect key="frame" x="110" y="120" width="381" height="359"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CallFire Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-dU-Rk4">
+                                <rect key="frame" x="200" y="264" width="201.5" height="71"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="359" id="5EK-Nj-M3E"/>
+                                    <constraint firstAttribute="width" constant="201.5" id="Nv5-mY-jvs"/>
+                                    <constraint firstAttribute="height" constant="71" id="eU5-He-VMI"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.1764705882" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="L2n-dU-Rk4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ERE-mX-vAt"/>
-                            <constraint firstItem="L2n-dU-Rk4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HT7-6f-nYU"/>
+                            <constraint firstItem="L2n-dU-Rk4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ce1-Qj-tgY"/>
+                            <constraint firstItem="L2n-dU-Rk4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oan-9L-Abn"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RedFive Logo" width="600" height="600"/>
+        <image name="CallFire Logo" width="403" height="142"/>
     </resources>
 </document>
