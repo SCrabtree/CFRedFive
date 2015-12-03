@@ -11,28 +11,28 @@ import UIKit
 
 struct CFActive {   // ADD filter of data for only Running
 	
-	let name : String?
-	let calls : String?
-	let progress : String?  // JOHN - Calculate or Call?
+	var name : String?
+	var calls : String?
+	var progress : String?  // JOHN - Calculate or Call?
 	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		calls = json["calls"].string
-		progress = json["progress"].string
-	}
+//	init(withJSON json : JSON) {
+//		name = json["name"].string
+//		calls = json["calls"].string
+//		progress = json["progress"].string
+//	}
 }
 
 struct CFInactive {   // ADD filter of data for only Done, Stopped, Scheduled
 	
-	let name : String?
-	let calls : String?
-	let progress : String?  // JOHN - Calculate or Call?
+	var name : String?
+	var calls : String?
+	var progress : String?  // JOHN - Calculate or Call?
 	
-	init(withJSON json : JSON) {
-		name = json["name"].string
-		calls = json["calls"].string
-		progress = json["progress"].string
-	}
+//	init(withJSON json : JSON) {
+//		name = json["name"].string
+//		calls = json["calls"].string
+//		progress = json["progress"].string
+//	}
 }
 
 struct CFNumber {

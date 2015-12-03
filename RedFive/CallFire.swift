@@ -16,7 +16,9 @@ class CallFire {
     let voiceLimit = 10
     let numberLimit = 10
     let keywordLimit = 10
-    
+	let activeLimit = 10
+	let inactiveLimit = 10
+	
     // TODO Remove these default credentials
     var credential = NSURLCredential(user: "42054e0ab7f2", password: "ce82c68b20685a90", persistence: .ForSession)
     
@@ -28,6 +30,7 @@ class CallFire {
         self.credential = credential
     }
 	
+	//TEXT MESSAGES
     func getTexts(callback: ((cfTexts: [CFText]) -> Void)?) {
         Alamofire.request(.GET, rootUrlV2 + "/texts", parameters: ["limit": textLimit])
                 .authenticate(usingCredential: credential)
@@ -55,7 +58,8 @@ class CallFire {
                     callback?(cfTexts: texts)
                 }
     }
-
+	
+	// VOICEMAIL MESSAGES
 	func getVoicemails(callback: ((cfVoicemails: [CFVoicemail]) -> Void)?) {
         Alamofire.request(.GET, rootUrlV2 + "/calls", parameters: ["limit": voiceLimit])
             .authenticate(usingCredential: credential)
@@ -87,6 +91,7 @@ class CallFire {
         }
 	}
 	
+	// NUMBERS DASHBOARD
     func getNumbers(callback: ((cfNumbers: [CFNumber]) -> Void)?) {
         Alamofire.request(.GET, rootUrlV2 + "/numbers/leases", parameters: ["limit": numberLimit])
             .authenticate(usingCredential: credential)
@@ -114,15 +119,61 @@ class CallFire {
         }
     }
 	
+	// ACTIVE DASHBOARD	-- NEW
 	func getActive(callback: ((cfActives: [CFActive]) -> Void)?) {
-		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
-		let activeData = CFActive(withJSON: activeJSON)
-		var actives: [CFActive] = []
-		actives.append(activeData)
-		
-        callback?(cfActives: actives)
+		Alamofire.request(.GET, rootUrlV2 + "/campaigns/voice-broadcasts?running", parameters: ["limit": activeLimit])
+			.authenticate(usingCredential: credential)
+			.validate()
+			.responseJSON { response in
+				var actives:[CFActive] = []
+				if let value = response.result.value as? NSDictionary {
+					if let items = value["items"] as? NSArray {
+						for item in items {
+							//let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
+							let json = JSON(item)
+							//print("# active: \(json)")
+							var active = CFActive()
+							// TODO
+							active.name = json["API Active Broadcast"].string
+							active.calls = "*42"
+							active.progress = "*24%"
+							actives.append(active)
+						}
+					}
+				}
+				callback?(cfActives: actives)
+		}
 	}
 	
+	
+	// INACTIVE DASHBOARD	-- NEW
+	func getInactive(callback: ((cfInactives: [CFInactive]) -> Void)?) {
+		Alamofire.request(.GET, rootUrlV2 + "/campaigns/voice-broadcasts", parameters: ["limit": activeLimit])
+			.authenticate(usingCredential: credential)
+			.validate()
+			.responseJSON { response in
+				var inactives:[CFInactive] = []
+				if let value = response.result.value as? NSDictionary {
+					if let items = value["items"] as? NSArray {
+						for item in items {
+							//let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
+							let json = JSON(item)
+							//print("# inactive: \(json)")
+							var inactive = CFInactive()
+							// TODO
+							inactive.name = json["API Inactive Broadcast"].string
+							inactive.calls = "*108"
+							inactive.progress = "*100%"
+							inactives.append(inactive)
+						}
+					}
+				}
+				callback?(cfInactives: inactives)
+		}
+	}
+
+
+//	ACTIVE DASHBOARD By Piersol
 //	func getActive(callback: ((cfActives: [CFActive]) -> Void)?) {
 //		let activeJSON = JSON(["name":"Active Broadcast","calls":"42","progress":"24%"])
 //		let activeData = CFActive(withJSON: activeJSON)
@@ -132,15 +183,17 @@ class CallFire {
 //		callback?(cfActives: actives)
 //	}
 	
-	func getInactive(callback: ((cfInactives: [CFInactive]) -> Void)?) {
-		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
-		let inactiveData = CFInactive(withJSON: inactiveJSON)
-		var inactives: [CFInactive] = []
-		inactives.append(inactiveData)
-		
-        callback?(cfInactives: inactives)
-	}
+//	INACTIVE DASHBOARD By Piersol
+//	func getInactive(callback: ((cfInactives: [CFInactive]) -> Void)?) {
+//		let inactiveJSON = JSON(["name":"Inactive Broadcast","calls":"108","progress":"100%"])
+//		let inactiveData = CFInactive(withJSON: inactiveJSON)
+//		var inactives: [CFInactive] = []
+//		inactives.append(inactiveData)
+//		
+//        callback?(cfInactives: inactives)
+//	}
 	
+	// KEYWORDS DASHBOARD
 	func getKeywords(callback: ((cfKeywords: [CFKeyword]) -> Void)?) {
         Alamofire.request(.GET, rootUrlV2 + "/keywords/leases", parameters: ["limit": keywordLimit])
             .authenticate(usingCredential: credential)
