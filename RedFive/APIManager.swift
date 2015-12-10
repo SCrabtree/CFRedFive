@@ -1,5 +1,5 @@
 //
-//  File1.swift
+//  APIManager.swift
 //  RedFive
 //
 //  Created by Sean Crabtree on 11/12/15.
